@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Link, NativeRouter } from 'react-router-native';
+import { Link, NativeRouter, Route, Routes } from 'react-router-native';
 import Doctors from './Components/Doctors';
 import Home from './Components/Home';
 
@@ -13,6 +13,10 @@ export default function App() {
       <NativeRouter>
         <Link to="/"><Text>Home</Text></Link>
         <Link to="/doctors"><Text>Doctors</Text></Link>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/doctors' element={<Doctors></Doctors>}></Route>
+        </Routes>
       </NativeRouter>
       <Home></Home>
       <Doctors></Doctors>
