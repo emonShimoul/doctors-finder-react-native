@@ -1,5 +1,12 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
+
+const styles = StyleSheet.create({
+    doctorName: {
+        color: 'goldenrod',
+        fontSize: 20
+    }
+})
 
 export default function Doctor({ dt }) {
     const { name, email } = dt;
@@ -11,7 +18,7 @@ export default function Doctor({ dt }) {
                 }}
                 style={{ width: 200, height: 200 }}
             />
-            <Text>{name}</Text>
+            <Text style={styles.doctorName}>{name}</Text>
         </View>
     )
 }
