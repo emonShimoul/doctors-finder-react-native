@@ -18,8 +18,6 @@ export default function App() {
           <Route path='/doctors' element={<Doctors></Doctors>}></Route>
         </Routes>
       </NativeRouter>
-      <Home></Home>
-      <Doctors></Doctors>
     </View>
   );
 }
