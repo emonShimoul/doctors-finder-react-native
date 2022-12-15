@@ -5,7 +5,7 @@ import Doctor from './Doctor';
 export default function Doctors() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/albums')
+        fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -13,10 +13,10 @@ export default function Doctors() {
         <View>
             <Text>Length: {data.length}</Text>
             {
-                // data.map(dt => <Doctor
-                //     key={dt.id}
-                //     dt={dt}
-                // ></Doctor>)
+                data.map(dt => <Doctor
+                    key={dt.id}
+                    dt={dt}
+                ></Doctor>)
             }
         </View>
     )
