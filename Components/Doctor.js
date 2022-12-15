@@ -1,11 +1,17 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 
 export default function Doctor({ dt }) {
-    const { id, title } = dt;
+    const { name, email } = dt;
     return (
         <View>
-            <Text>{title}</Text>
+            <Image
+                source={{
+                    uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
+                }}
+                style={{ width: 200, height: 200 }}
+            />
+            <Text>{name}</Text>
         </View>
     )
 }
