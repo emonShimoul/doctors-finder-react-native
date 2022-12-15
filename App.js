@@ -11,8 +11,8 @@ export default function App() {
       <Text>Helloooo!!</Text>
       <StatusBar style="auto" />
       <NativeRouter>
-        <Link to="/"><Text>Home!!</Text></Link>
-        <Link to="/about"><Text>About!!</Text></Link>
+        <Link to="/"><Text>Home</Text></Link>
+        <Link to="/doctors"><Text>Doctors</Text></Link>
       </NativeRouter>
       <Home></Home>
       <Doctors></Doctors>
