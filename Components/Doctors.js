@@ -3,20 +3,20 @@ import React, { useEffect, useState } from 'react'
 import Doctor from './Doctor';
 
 export default function Doctors() {
-    const [doctors, setDoctors] = useState([]);
+    const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/doctors')
+        fetch('https://jsonplaceholder.typicode.com/albums')
             .then(res => res.json())
-            .then(data => setDoctors(data))
+            .then(data => setData(data))
     }, [])
     return (
         <View>
-            <Text>This is Doctors: {doctors.length}</Text>
+            <Text>Length: {data.length}</Text>
             {
-                doctors.map(doctor => <Doctor
-                    key={doctor._id}
-                    doctor={doctor}
-                ></Doctor>)
+                // data.map(dt => <Doctor
+                //     key={dt.id}
+                //     dt={dt}
+                // ></Doctor>)
             }
         </View>
     )
