@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Doctor from './Doctor';
 
@@ -12,12 +12,14 @@ export default function Doctors() {
     return (
         <View>
             <Text>Length: {data.length}</Text>
-            {
-                data.map(dt => <Doctor
-                    key={dt.id}
-                    dt={dt}
-                ></Doctor>)
-            }
+            <ScrollView>
+                {
+                    data.map(dt => <Doctor
+                        key={dt.id}
+                        dt={dt}
+                    ></Doctor>)
+                }
+            </ScrollView>
         </View>
     )
 }
